@@ -1,3 +1,9 @@
+/*
+* linear search
+* 그냥 처음부터 끝까지 순서대로 찾는 것
+* 
+* O(n)
+*/
 #include<iostream>
 using namespace std;
 	
