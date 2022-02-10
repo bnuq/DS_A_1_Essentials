@@ -7,6 +7,8 @@ bool compare(int a,int b){
 }
 
 //Sort the elements in increasing order 
+// 전체를 훑으면서, 인접한 것들을 swapping 하는 것을 반복
+// 매 반복마다 가장 큰 값을 뒤로 보낸다
 void bubble_sort(int a[],int n){
 
 	for(int times=1;times<=n-1;times++){
