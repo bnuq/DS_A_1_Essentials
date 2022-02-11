@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="03_Basic_Sorting\33_counting_sort.cpp">
+    <ClCompile Include="04_Character_Arrays\39_strcpy.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
