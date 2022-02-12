@@ -19,6 +19,7 @@ int main(){
 		sentence[len++] = temp;
 		//sentence[len++] = '\n';
 
+		// cin.get => 받은 문자를 리턴
 		temp = cin.get();
 	}
 
