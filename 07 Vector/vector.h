@@ -1,4 +1,6 @@
-
+/*
+실제 벡터의 구조를 제작
+*/
 
 template<typename T>
 class Vector{
