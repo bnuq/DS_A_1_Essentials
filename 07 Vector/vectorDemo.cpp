@@ -22,5 +22,12 @@ int main() {
 		cout << endl;
 	}
 
-	
+	vec.empty();
+	vec.pop_back();
+	vec.front();
+	vec.back();
+	vec.at(1);
+	vec.size();
+	vec.capacity();
+
 }

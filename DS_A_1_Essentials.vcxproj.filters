@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="07 Vector\vectorDemo.cpp">
+    <ClCompile Include="02_Arrays\02_Exercises.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

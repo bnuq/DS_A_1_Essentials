@@ -21,6 +21,8 @@ public:
 		if(cs==ms){
 			//create a new array and delete the old one, double the capacity 
 			T *oldArr = arr;
+
+			// 기존에 할당한 크기의 2배만큼 새롭게 할당한다
 			ms = 2*ms;
 			arr = new T[ms];
 			//copy the elements
@@ -41,11 +43,14 @@ public:
 		}
 	}
 
+
+	// std::vector::empty() 로 존재
 	bool isEmpty() const{
 		return cs==0;
 	}
 
 	//Front, Back, At(i), []
+	// 다 실제로 존재
 	T front() const{
 		return arr[0];
 	}
