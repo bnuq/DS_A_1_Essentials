@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="05_2D_Array\05_exercises.cpp">
+    <ClCompile Include="08_Bitmasking\08_exercises.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
