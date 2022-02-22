@@ -44,7 +44,7 @@ void merge(vector<int> &array,int s,int e){
 void mergesort(vector<int> &arr,int s,int e){
 	//base case
 	if(s>=e){
-		return;
+		return; // 그냥 원하는 최소 사이즈만큼 내려왔다는 걸 알림?
 	}
 	//rec case
 	int mid = (s+e)/2;

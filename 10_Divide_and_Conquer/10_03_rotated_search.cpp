@@ -1,3 +1,7 @@
+/*
+그래프를 그려서 확인
+반복문에서도 조사하는 범위를 조금씩 줄여나가는 방식 = Divide
+줄인 범위에 대해서 작업 = Conquer*/
 #include<iostream>
 #include<vector>
 using namespace std;
