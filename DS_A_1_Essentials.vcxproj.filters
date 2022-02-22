@@ -16,7 +16,11 @@
   </ItemGroup>
   <ItemGroup>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     <ClCompile Include="my_recursion.cpp">
+=======
+    <ClCompile Include="11_Backtracking\11_backtracking.cpp">
+>>>>>>> Stashed changes
 =======
     <ClCompile Include="11_Backtracking\11_backtracking.cpp">
 >>>>>>> Stashed changes
