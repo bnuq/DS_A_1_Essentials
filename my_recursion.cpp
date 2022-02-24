@@ -121,7 +121,7 @@ int main() {
 		cout << x << endl;*/
 
 
-	array<char, 100> input{ "123" };
+	array<char, 100> input{ "12" };
 	array<char, 100> output{};
 	vector<string> str{};
 
