@@ -1,3 +1,13 @@
+/*
+* Geeks For Geeks 에 있던 문제, Binary Tree 의 Node 를 출력하는 데 Spiral Order 로 출력
+* 왼쪽으로 갔다가 오른쪽으로 갔다가 하면서, 위에서부터 아래까지 모든 노드를 출력하는 문제
+* 
+* Recursion 을 이용해서 어떻게 푸는가?
+* 각 Node 의 Level 을 먼저 인식하고, Tree 의 각 Level 을 출력한다고 생각
+* Root 노드에서 Level l 을 출력한다 => 그 및 노드에서 Level l-1 을 출력한다
+* 이런 식으로 문제를 작게 줄일 수 있다 => 결국 Level 0 에서 자기자신을 출력하는 데 까지 문제를 작게 만든다
+*/
+
 // C++ program for recursive level 
 // order traversal in spiral form
 #include <vector>
