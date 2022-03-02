@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="14 LinkedList\14_list.cpp">
+    <ClCompile Include="소스23.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
