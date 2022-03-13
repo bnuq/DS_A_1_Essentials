@@ -1,58 +1,57 @@
+#include <iostream>
+
+#include <string>
 #include <vector>
 #include <queue>
-#include <iostream>
+
 using namespace std;
 
+int solution(int bridge_length, int weight, vector<int> truck_weights) {
 
+    queue<int> wT{};
+    for (int i = 0; i < truck_weights.size(); i++) wT.push(truck_weights[i]);
 
-vector<char> firstnonrepeating(vector<char> str) {
+    int curTime = 0;
+    int total_weight = 0;
+    int total_count = 0;
+    queue<pair<int, int>> rT{};
+    while (!wT.empty() || !rT.empty()) {
+        curTime++;
 
-    vector<char> res{};
-    vector<int> isUnique(CHAR_MAX, 0);
-
-    queue<char> q{};
-
-    for (auto ch : str) {
-        if (isUnique[ch - 'a'] == 0) { // 아직 한번도 안나왔다
-            isUnique[ch - 'a'] = 1;
-            q.push(ch);
-            res.push_back(q.front());
+        if (rT.empty()) {
+            total_weight += wT.front();
+            total_count++;
+            
+            rT.push({ wT.front(), curTime });
+            wT.pop();
         }
-        else { // 이미 나왔었던 문자
-            // 처음으로 중복되는 경우
-            if (isUnique[ch - 'a'] == 1) isUnique[ch - 'a']++; // 값을 2로 만들어 => 2번째 나왔다
-            // 큐에 추가하지 않고
+        else {
+            while (!rT.empty() and curTime - rT.front().second >= bridge_length) {
+                total_weight -= rT.front().first;
+                total_count--;
 
-            // 혹시 큐가 비었다면 0 출력
-            if (q.empty()) res.push_back('0');
-            else {
-                // 혹시 큐 프론트와 같은 지 확인
-                if (q.front() == ch) {
-                    q.pop();
+                rT.pop();
+            }
 
-                    while (!q.empty() and isUnique[q.front() - 'a'] == 2) {
-                        q.pop();
-                    }
+            if (!wT.empty() and (total_count + 1 <= bridge_length) 
+                and (total_weight + wT.front() <= weight)) {
+                total_weight += wT.front();
+                total_count++;
 
-                    if (q.empty()) res.push_back('0');
-                    else res.push_back(q.front());
-                }
-                else {
-                    res.push_back(q.front());
-                }
-            }            
+                rT.push({ wT.front(), curTime });
+                wT.pop();
+            }
         }
+
     }
-
-    return res;
+    
+    return curTime;
 }
 
 int main() {
-    vector<char> str{'a', 'a', 'b', 'c'};
+    int bridge_length = 2;
+    int weight = 10;
+    vector<int> truck_weights{ 7,4,5,6 };
 
-    vector<char> res = firstnonrepeating(str);
-
-    for (auto x : res)
-        cout << x << " ";
-    cout << endl;
+    cout << solution(bridge_length, weight, truck_weights) << endl;
 }
