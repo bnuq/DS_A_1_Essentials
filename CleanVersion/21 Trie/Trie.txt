@@ -1,0 +1,10 @@
+Hash Table 에 담는 것이 너무 많을 때 => 비효율적이게 된다
+Trie 를 사용하면 좋다
+
+Generic tree
+Efficient information retrieval
+Searches in optimal time O(key length) but uses extra storage
+
+Prefix Tree 라고 부르기도 한다
+문자열들을 저장할 때 사용
+한 글자씩 저장, 트리를 확장
