@@ -8,13 +8,15 @@ int main(){
 	string words[] = {"hello","he","apple","aple","news"};
 	Trie t;
 
-	for(auto word:words){
+	for(const string& word : words){
 		t.insert(word);
 	}
 
 	string key;
-	cin>>key;
-	cout<< t.search(key) <<endl;
+	//cin>>key;
+
+	key = "apple";
+	cout<< boolalpha << t.search(key) <<endl;
 	
 
 	return 0;
