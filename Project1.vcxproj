@@ -19,10 +19,10 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="CleanVersion\21 Trie\trie.cpp" />
+    <ClInclude Include="Lecture\21_Trie\trie.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CleanVersion\21 Trie\trie.h" />
+    <Text Include="Lecture\22_Graph_Introduction\graph.txt" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

@@ -3,11 +3,13 @@
 #include<set>
 #include<vector>
 #include<climits>
+
 using namespace std;
 
 class Graph{
-
 	int V;
+	// Weighted Graph
+	// 각 edge 에, 그 edge 를 지나는 데 필요한 가중치가 주어져 있다
 	list<pair<int,int> > *l;
 
 public:
@@ -15,15 +17,17 @@ public:
 		V = v;
 		l = new list<pair<int,int> >[V];
 	}
-
+							
+							// wt = 가중치
 	void addEdge(int u,int v,int wt,bool undir = true){
-
 		l[u].push_back({wt,v});
 		if(undir){
 			l[v].push_back({wt,u});
 		}
 	}
 
+
+	// 다익스트라 알고리즘 실행
 	int dijkstra(int src,int dest){
 
 		//Data Structures

@@ -22,21 +22,29 @@ public:
 		}
 	}
 	void dfsHelper(int node,bool *visited){
+		// 해당 노드에 방문함을 기록
 		visited[node] = true;
-		cout<<node<<",";
 
-		//make a dfs call on all its unvisited neighbours
+		// 방문한 노드에서 어떤 작업을 하고
+		cout << node << ",";
+
+		// make a dfs call on all its unvisited neighbours
+		// Recursive Call => Stack 과 유사
+		// 나중에 넣은 노드먼저 방문한다 => 먼저 깊게 탐색
 		for(int nbr : l[node]){
 			if(!visited[nbr]){
 				dfsHelper(nbr,visited);
 			}
 		}
 		return;
-
 	}
 
+	// DFS Graph Traversal
 	void dfs(int source){
+		// 방문 여부를 저장하는 리소스를 할당
 		bool *visited = new bool[V]{0};
+
+		// source 노드부터 시작
 		dfsHelper(source,visited);
 	}
 };
