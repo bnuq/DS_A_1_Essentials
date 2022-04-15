@@ -19,10 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Lecture\21_Trie\trie.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Lecture\22_Graph_Introduction\graph.txt" />
+    <ClCompile Include="Lecture\22_Graph_Introduction\06_dijkstra.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
