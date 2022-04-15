@@ -1,0 +1,12 @@
+DP, Dynamic Programming
+	DP is all about Remembering what you have solved in the past
+
+Memoization
+
+Top Down DP = Recursion + Memoization
+	Start from top
+	Start building the big solution by explaing how you build it from smaller solutions
+
+
+Bottom UP DP = Iterative
+	Start with small solutions and use it to build larger solutions
