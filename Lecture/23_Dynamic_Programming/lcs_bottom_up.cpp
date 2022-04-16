@@ -4,6 +4,9 @@
 using namespace std;
 
 
+
+
+
 int lcs(string s1,string s2){
 	//bottom up approach to lcs
 	int n1 = s1.length();
