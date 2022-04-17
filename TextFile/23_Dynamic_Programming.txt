@@ -10,3 +10,7 @@ Top Down DP = Recursion + Memoization
 
 Bottom UP DP = Iterative
 	Start with small solutions and use it to build larger solutions
+
+
+Greedy
+	매번 선택에서, 가장 이득이 되는 경우를 선택한다
