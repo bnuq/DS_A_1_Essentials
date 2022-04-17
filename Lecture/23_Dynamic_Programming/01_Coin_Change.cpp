@@ -13,7 +13,7 @@ int minNumberOfCoinsForChange(int m, vector<int> denoms) {
     vector<int> dp(m+1, INT_MAX);
     dp[0] = 0; // 0 을 만들 때는 아무것도 사용하지 않으면 되니까, 0 개가 쓰인다
 
-    // 1 부터 m 까지 밑에서부터 검색을 시작한다
+    // 1 부터 m 까지, i 를 만들 수 있는 경우의 수를 조사한다
     for(int i = 1; i <= m; i++) {
         
         // i 값을 만들기 위해 denoms 중 하나를 사용한다고 가정하고
@@ -22,7 +22,8 @@ int minNumberOfCoinsForChange(int m, vector<int> denoms) {
         for(int c : denoms) {
 
             if(i - c >= 0 and    // denoms 중 하나를 썼을 때 나머지가 양수여야 하고
-            dp[i-c] != INT_MAX) { // 나머지를 만드는 개수가 존재해야 한다
+            dp[i-c] != INT_MAX) { // 나머지를 만들 수 있어야 한다
+
                 // dp[i] 에는 이전 다른 c 를 통해 만든 개수가 저장되어 있다
                 dp[i] = min(dp[i], dp[i-c] + 1);
                }
